@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Prerana!</title>
+  <!-- Include Gistesy Font -->
+  <style>
+    @font-face {
+        font-family: 'Gistesy';
+        src: url("Roboto-CondensedItalic.ttf") format('truetype');
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styles for dark theme */
+    body {
+      font-family: 'Gistesy', sans-serif;
+      color: #333; /* Light black color */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("images/per.jpg");
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 800px;
+      width: 90%;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      color: #ddd;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      color: #ddd;
+      font-weight: lighter;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    .button {
+      background-color: rgba(255, 0, 0, 0.8);
+      color: white;
+      padding: 20px 40px;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    }
+
+    .button:hover {
+      background-color: rgba(255, 0, 0, 1);
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+
+    /* Gift Section */
+    #gift-section {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 50px;
+      border-radius: 20px;
+      width: 80%;
+      max-width: 900px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+    }
+
+    #video-container {
+      margin-bottom: 30px;
+    }
+
+    video {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    #celebration {
+      font-size: 2rem;
+      color: #ff007f;
+      font-weight: bold;
+      margin-top: 30px;
+      text-shadow: 0 0 20px rgba(255, 0, 127, 0.8);
+    }
+
+    /* Footer for Copyright */
+    footer {
+      position: absolute;
+      bottom: 20px;
+      color: #fff;
+      font-size: 1rem;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    footer .social-icons img {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      .button {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+      }
+
+      #gift-section {
+        width: 90%;
+      }
+
+      #celebration {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Animation for button */
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .button {
+      animation: bounce 1s infinite;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero Section (Home) -->
+  <div class="hero">
+    <h1>Happy Birthday my Favorite Dummiii!</h1>
+    <p>To the most amazing girl, destined to be a great doctor. May this year bring you closer to your dreams!</p>
+    <p>You’re my constant star in every sky❤️</p>
+    <button class="button" onclick="showGiftSection()">Click in, and let the surprise take you by storm!!</button>
+  </div>
+
+  <!-- Gift Section -->
+  <section id="gift-section">
+    <div id="video-container">
+      <h2>Your Special Video</h2>
+      <!-- Replace with your own video -->
+      <video controls>
+        <source src="videos/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div id="celebration">
+      <p>Let's Celebrate Your Special Day!</p>
+    </div>
+  </section>
+
+  <!-- Footer for Copyright -->
+  <footer>
+    <p>© 2025 by Sathwik. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showGiftSection() {
+      // Hide Home Section and Show Gift Section
+      document.querySelector('.hero').style.display = 'none';
+      document.getElementById('gift-section').style.display = 'block';
+    }
+  </script>
+
+</body>
+
+</html>
